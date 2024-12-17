@@ -1,5 +1,5 @@
 name: latex2pdf
-uses: thomas-chauvet/latex2pdf-action@1.1.0
+#uses: thomas-chauvet/latex2pdf-action@1.1.0
             
 on:
   push:

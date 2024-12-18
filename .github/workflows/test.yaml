@@ -1,0 +1,24 @@
+name: Compile LaTeX to PDF
+
+on:
+  push:
+    branches:
+      - main  # Specifica il branch su cui vuoi attivare il workflow
+  pull_request:
+    paths:
+      - '**/*.tex'  # Attiva il workflow quando i file .tex cambiano
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex  # Cambia con il nome del tuo file principale .tex
+        latexmk_shell_escape: true  # Se hai bisogno di abilitare il comando \write18
+        latexmk_use_lualatex: false  # Usa latexmk di default

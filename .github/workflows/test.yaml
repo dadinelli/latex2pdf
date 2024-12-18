@@ -19,6 +19,6 @@ jobs:
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: main.tex  # Cambia con il nome del tuo file principale .tex
+        root_file: analisi_dei_requisiti.tex  # Cambia con il nome del tuo file principale .tex
         latexmk_shell_escape: true  # Se hai bisogno di abilitare il comando \write18
         latexmk_use_lualatex: false  # Usa latexmk di default
